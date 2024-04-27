@@ -119,6 +119,9 @@ const routes = [{
 }, {
   path: '/online_user',
   file: 'online.html'
+}, {
+  path: '/gpt4',
+  file: 'gpt.html'
 }, ];
 routes.forEach(route => {
   app.get(route.path, (req, res) => {
