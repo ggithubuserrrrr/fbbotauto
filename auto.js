@@ -107,6 +107,7 @@ fs.readdirSync(script).forEach((file) => {
     }
   }
 });
+/*app.use(express.static(__dirname));*/
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(express.json());
@@ -119,6 +120,9 @@ const routes = [{
 }, {
   path: '/online_user',
   file: 'online.html'
+}, {
+  path: '/ads.txt',
+  file: 'ads.txt'
 }, ];
 routes.forEach(route => {
   app.get(route.path, (req, res) => {
